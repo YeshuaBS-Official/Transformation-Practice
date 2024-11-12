@@ -1,0 +1,124 @@
+#section2D{
+    height: 100px;;
+    width: 120%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: rgba(127, 255, 212, 0.2);
+}
+
+#section3D{
+    height: 100px;;
+    width: 120%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: rgba(217, 51, 29, 0.2);
+}
+
+.object2D{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-left: 50px;
+    margin-top: 30px;
+    background-color: rgb(127, 255, 212);
+}
+
+.object3D{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-left: 50px;
+    margin-top: 30px;
+    perspective: 20px;
+    background-color: rgb(217, 51, 29);
+}
+
+#object1{
+    animation-name: rotate2D;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+#object2{
+    animation-name: skew2D;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+#object3{
+    animation-name: scale2D;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+#object4{
+    animation-name: translate2D;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+#object5{
+    animation-name: rotateX3D;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite; 
+}
+
+#object6{
+    animation-name: rotateY3D;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite; 
+}
+
+#object7{
+    animation-name: rotateZ3D;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes rotate2D {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(90deg)}
+}
+
+@keyframes skew2D {
+    0% {transform: skew( 0deg, 0deg);}
+    50% {transform: skew( 30deg, 30deg)}
+    100% {transform: skew( 0deg, 0deg);}
+}
+
+@keyframes scale2D {
+    0% {transform: scale( 1, 1);}
+    50% {transform: scale( 2, 2);}
+    100% {transform: scale( 1, 1);}
+}
+
+@keyframes translate2D {
+    50% {transform: translate( 30px, 30px);}
+    100% {transform: translate( 0px, 0px);}
+}
+
+@keyframes rotateX3D {
+    0% {transform: perspective(20px) rotateX(0deg) scaleZ(0);}
+    50% {transform: perspective(30px) rotateX(50deg) scaleZ(5)}
+    100% {transform: perspective(20px) rotateX(0deg) scaleZ(0);}
+}
+
+@keyframes rotateY3D {
+    0% {transform: perspective(20px) rotateY(0deg) scaleZ(0);}
+    50% {transform: perspective(30px) rotateY(30deg) scaleZ(5)}
+    100% {transform: perspective(20px) rotateY(0deg) scaleZ(0);}
+}
+
+@keyframes rotateZ3D {
+    50% {transform: rotateZ(60deg)}
+    100% {transform: rotateZ(0deg);}
+}
+
+
